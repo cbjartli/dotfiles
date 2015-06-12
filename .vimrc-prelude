@@ -23,6 +23,7 @@ NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'vim-scripts/Wombat'
 NeoBundle 'lervag/vimtex'
+NeoBundle 'fatih/vim-go'
 
 " You can specify revision/branch/tag.
 NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
