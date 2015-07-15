@@ -1,0 +1,21 @@
+" Remove GUI cruft
+set guioptions-=m
+set guioptions-=T
+set guioptions-=r
+set guioptions-=L
+
+" Load Pathogen
+set runtimepath+=~/.dotfiles/vim/plugins/vim-pathogen/
+execute pathogen#infect()
+
+" Settings
+filetype plugin indent on
+syntax on
+inoremap jk <Esc>
+set nocompatible
+set number
+set tabstop=4
+set shiftwidth=4
+set expandtab
+"color wombat
+
