@@ -6,7 +6,9 @@ set guioptions-=L
 
 " Load Pathogen
 set runtimepath+=~/.dotfiles/vim/plugins/vim-pathogen/
-execute pathogen#infect()
+execute pathogen#infect('~/.dotfiles/vim/plugins/{}')
+
+
 
 " Settings
 filetype plugin indent on
@@ -17,5 +19,4 @@ set number
 set tabstop=4
 set shiftwidth=4
 set expandtab
-"color wombat
-
+color wombat 
