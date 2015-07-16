@@ -13,3 +13,6 @@
 [submodule "vim/plugins/vim-go"]
 	path = vim/plugins/vim-go
 	url = https://github.com/fatih/vim-go.git
+[submodule "vim/plugins/vim-fugitive"]
+	path = vim/plugins/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git
