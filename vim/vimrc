@@ -6,9 +6,7 @@ set guioptions-=L
 
 " Load Pathogen
 set runtimepath+=~/.dotfiles/vim/plugins/vim-pathogen/
-execute pathogen#infect('~/.dotfiles/vim/plugins/{}')
-
-
+execute pathogen#infect('~/.dotfiles/vim/plugins/{}', '~/.dotfiles/vim/plugins/LaTeX-Box/{}')
 
 " Settings
 filetype plugin indent on
@@ -20,3 +18,13 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 color wombat 
+
+" Conceal
+set cole=2
+let g:tex_conceal="adgm"
+hi Conceal guibg=black guifg=white
+
+" LaTeX-Box
+let g:LatexBox_latexmk_async=1
+let g:LatexBox_latexmk_preview_continuously=1
+let g:LatexBox_quickfix=2
