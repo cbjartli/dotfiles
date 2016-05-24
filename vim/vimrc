@@ -29,3 +29,10 @@ hi Conceal guibg=black guifg=white
 let g:LatexBox_latexmk_async=1
 let g:LatexBox_latexmk_preview_continuously=1
 let g:LatexBox_quickfix=2
+
+" UltiSnips
+set runtimepath+=~/.dotfiles/vim/snippets
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+let g:UltiSnipsEditSplit="vertical"
