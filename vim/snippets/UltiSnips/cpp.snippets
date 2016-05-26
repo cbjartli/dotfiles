@@ -1,8 +1,80 @@
+snippet cl "Class"
+class ${1:`!p snip.rv = snip.basename`} 
+{
+    public:
+        $1(${2});
+        ${3:virtual }~$1();
+    private:
+        ${4}
+};${0}
+endsnippet
+
+snippet ctor "Constructor"
+${1:ClassName}::$1(${2:${3:type} ${4:param}})${5: : ${6}}
+{
+    ${7}
+}${0}
+endsnippet
+
+snippet dtor "Destructor"
+${1:ClassName}::~$1()
+{
+    ${2}
+}${0}
+endsnippet
+
+snippet /* "C-style Block Comment"
+/* ${0} */
+endsnippet
+
+snippet cout "Cout"
+${1:std::}cout << ${2} << ${3:$1endl};${0}
+endsnippet
+
+snippet vec "Vector"
+std::vector<${1:type}> ${2:name}
+endsnippet
+
+snippet scast "Static Cast"
+static_cast<${1}>(${2})${0}
+endsnippet
+
+snippet rcast "Reinterpret Cast"
+reinterpret_cast<${1}>(${2})${0}
+endsnippet
+
+snippet dcast "Dynamic Cast"
+dynamic_cast<${1}>(${2})${0}
+endsnippet
+
+snippet ccast "Const Cast"
+const_cast<${1}>(${2})${0}
+endsnippet
+
 snippet fn "Function"
 ${1:void} ${2:function}(${3})
 {
     ${0}
 }
+endsnippet
+
+snippet fnd "Function Declaration"
+${1:void} ${2:function}(${3});${0}
+endsnippet
+
+snippet sw "Switch Statement"
+switch (${1:expression})
+{
+    case ${2:const}:
+	    ${3}
+		break;
+}${0}
+endsnippet
+
+snippet ca "Case"
+case ${1:const}:
+    ${2}
+	break;${0}
 endsnippet
 
 snippet if "If Condition"
@@ -33,15 +105,22 @@ while (${1:true})
 }
 endsnippet
 
-snippet tem "Template"
-template <typename ${1:T}>
+snippet for "For Loop"
+for (${1:auto} ${2:i} ${3:= 0}; ${4}; ${5:++$2})
+{
+    ${6}
+}${0}
 endsnippet
 
-snippet cl "Class"
-class ${1:ClassName}
+snippet fore "For Each Loop"
+for (${1:auto} ${2:elt} : ${3:container})
 {
-    ${0}
-};
+    ${4}
+}${0}
+endsnippet
+
+snippet tem "Template"
+template <typename ${1:T}>
 endsnippet
 
 snippet pu
@@ -61,4 +140,8 @@ endsnippet
 
 snippet inc "Include"
 #include <${1:file}>
+endsnippet
+
+snippet uns "Using Namespace"
+using namespace ${1:std};${0}
 endsnippet
