@@ -9,6 +9,10 @@ class ${1:`!p snip.rv = snip.basename`}
 };${0}
 endsnippet
 
+snippet unm "Unordered Map" i
+std::unordered_map<${1:Key}, ${2:Val}>${0}
+endsnippet
+
 snippet ctor "Constructor"
 ${1:ClassName}::$1(${2:${3:type} ${4:param}})${5: : ${6}}
 {
@@ -144,4 +148,16 @@ endsnippet
 
 snippet uns "Using Namespace"
 using namespace ${1:std};${0}
+endsnippet
+
+snippet str "String" i
+std::string 
+endsnippet
+
+snippet ma "Main Function" 
+int main(int argc, char *argv[])
+{
+    ${0}
+	return 0;
+}
 endsnippet
