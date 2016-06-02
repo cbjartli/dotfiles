@@ -1,14 +1,20 @@
+"------------------------------------
 " Remove GUI cruft
+"------------------------------------
 set guioptions-=m
 set guioptions-=T
 set guioptions-=r
 set guioptions-=L
 
+"------------------------------------
 " Load Pathogen
+"------------------------------------
 set runtimepath+=~/.dotfiles/vim/plugins/vim-pathogen/
 execute pathogen#infect('~/.dotfiles/vim/plugins/{}', '~/.dotfiles/vim/plugins/LaTeX-Box/{}')
 
+"------------------------------------
 " Settings
+"------------------------------------
 filetype plugin indent on
 syntax on
 inoremap jk <Esc>
@@ -20,19 +26,36 @@ set expandtab
 set incsearch
 color wombat 
 
+"------------------------------------
 " Conceal
+"------------------------------------
 set cole=2
 let g:tex_conceal="adgm"
 hi Conceal guibg=black guifg=white
 
+"------------------------------------
 " LaTeX-Box
+"------------------------------------
 let g:LatexBox_latexmk_async=1
 let g:LatexBox_latexmk_preview_continuously=1
 let g:LatexBox_quickfix=2
 
+"------------------------------------
 " UltiSnips
+"------------------------------------
 set runtimepath+=~/.dotfiles/vim/snippets
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 let g:UltiSnipsEditSplit="vertical"
+
+"------------------------------------
+" Nvim-R
+"------------------------------------
+if has("gui_running")
+    inoremap <C-Space> <C-x><C-o>
+    else
+        inoremap <Nul> <C-x><C-o>
+endif
+vmap <Space> <Plug>RDSendSelection
+nmap <Space> <Plug>RDSendLine
