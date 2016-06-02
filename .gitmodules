@@ -22,3 +22,6 @@
 [submodule "vim/plugins/ultisnips"]
 	path = vim/plugins/ultisnips
 	url = https://github.com/SirVer/ultisnips.git
+[submodule "vim/plugins/Nvim-R"]
+	path = vim/plugins/Nvim-R
+	url = https://github.com/jalvesaq/Nvim-R.git
