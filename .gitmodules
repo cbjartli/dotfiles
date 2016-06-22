@@ -34,3 +34,6 @@
 [submodule "vim/plugins/vimproc.vim"]
 	path = vim/plugins/vimproc.vim
 	url = https://github.com/Shougo/vimproc.vim.git
+[submodule "vim/plugins/tsuquyomi"]
+	path = vim/plugins/tsuquyomi
+	url = https://github.com/Quramy/tsuquyomi.git
