@@ -31,3 +31,6 @@
 [submodule "vim/plugins/typescript-vim"]
 	path = vim/plugins/typescript-vim
 	url = https://github.com/leafgarland/typescript-vim.git
+[submodule "vim/plugins/vimproc.vim"]
+	path = vim/plugins/vimproc.vim
+	url = https://github.com/Shougo/vimproc.vim.git
