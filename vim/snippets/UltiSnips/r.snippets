@@ -1,4 +1,4 @@
-snippet #! "Hashbang for Rscript (#!)" b
+snippet #! "Hashbang for R"
 #!/usr/bin/env Rscript
 endsnippet
 
@@ -74,8 +74,8 @@ snippet df "Data frame"
 ${1:name}[${2:rows}, ${0:cols}]
 endsnippet
 
-snippet c "c function"
-c(${0:items})
+snippet c "c function" i
+c(${1:items})${0}
 endsnippet
 
 snippet li "list function"
@@ -118,6 +118,10 @@ snippet pl "Plot function"
 plot(${1:x}, ${0:y})
 endsnippet
 
+snippet pll "Plot function with labels"
+plot(${1:x}, ${2:y}, xlab="${3:xlabel}", ylab="${4:ylabel}", main="${5:title}")${0}
+endsnippet
+
 snippet ggp "ggplot2 plot"
 ggplot(${1:data}, aes(${0:aesthetics}))
 endsnippet
@@ -148,4 +152,12 @@ endsnippet
 
 snippet kvt "KV test"
 kv.test(${1:x}, ${0:y})
+endsnippet
+
+snippet t "Boolean True" w
+TRUE
+endsnippet
+
+snippet f "Boolean False" w
+FALSE
 endsnippet
