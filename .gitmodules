@@ -28,3 +28,6 @@
 [submodule "vim/plugins/undotree"]
 	path = vim/plugins/undotree
 	url = https://github.com/mbbill/undotree.git
+[submodule "vim/plugins/typescript-vim"]
+	path = vim/plugins/typescript-vim
+	url = https://github.com/leafgarland/typescript-vim.git
