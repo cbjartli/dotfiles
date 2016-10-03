@@ -26,6 +26,7 @@ set shiftwidth=4
 set expandtab
 set incsearch
 color wombat 
+set laststatus=2
 
 " Highlighting
 let hlstate=0
@@ -182,3 +183,8 @@ let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 " Tagbar
 "------------------------------------
 nmap <C-A-\> :TagbarToggle<CR>
+
+"------------------------------------
+" Powerline
+"------------------------------------
+let g:airline_powerline_fonts = 1
