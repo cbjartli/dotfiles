@@ -1,0 +1,25 @@
+extends js
+
+snippet imp "Import"
+import {${1:Component}} from '${2:file}';${0}
+endsnippet
+
+snippet ctor "constructor" b
+constructor(${0}) {
+	${1:// code}
+}
+endsnippet
+
+snippet cls "class .." b
+class ${1:ClassName}${2: extends ${3:ParentClass}} {
+	${4: constructor(${5:args}) {
+    ${6://code...}
+  }}
+}
+endsnippet
+
+snippet itf "interface .." b
+interface ${1:InterfaceName}${2: extends ${3:Parent}} {
+	${4://code...}
+}
+endsnippet

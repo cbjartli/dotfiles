@@ -119,10 +119,16 @@ import (
 endsnippet
 
 # full interface snippet
-snippet interface "interface I { ... }"
+snippet ti "interface I { ... }"
 type ${1:Interface} interface {
 	${2:/* TODO: add methods */}
 }
+endsnippet
+
+snippet ts "Typedef Struct"
+type ${1:typename} struct {
+	${2}
+}${0}
 endsnippet
 
 # if condition
@@ -207,12 +213,12 @@ func ${1:name}(${2:params})${3/(.+)/ /}`!p opening_par(snip, 3)`$3`!p closing_pa
 }
 endsnippet
 
-# Fmt Printf debug
-snippet ff "fmt.Printf(...)"
-fmt.Printf("${1:${VISUAL}} = %+v\n", $1)
+# Fmt Printf 
+snippet fpf "fmt.Printf(...)"
+fmt.Printf("${1:${VISUAL}}")
 endsnippet
 
-# Fmt Println debug
+# Fmt Println 
 snippet pln "fmt.Println(...)"
 fmt.Println("${1:${VISUAL}}")
 endsnippet
@@ -317,7 +323,7 @@ ${0}
 endsnippet
 
 # test function
-snippet test "func TestXYZ(t *testing.T) { ... }"
+snippet tf "func TestXYZ(t *testing.T) { ... }"
 func Test${1:Function}(t *testing.T) {
 	${0:${VISUAL}}
 }
