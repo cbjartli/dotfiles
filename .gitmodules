@@ -52,3 +52,12 @@
 [submodule "vim/plugins/fonts"]
 	path = vim/plugins/fonts
 	url = https://github.com/powerline/fonts.git
+[submodule "vim/plugins/nerdcommenter"]
+	path = vim/plugins/nerdcommenter
+	url = https://github.com/scrooloose/nerdcommenter.git
+[submodule "vim/plugins/YouCompleteMe"]
+	path = vim/plugins/YouCompleteMe
+	url = https://github.com/Valloric/YouCompleteMe.git
+[submodule "vim/plugins/supertab"]
+	path = vim/plugins/supertab
+	url = https://github.com/ervandew/supertab.git

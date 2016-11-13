@@ -24,16 +24,29 @@ set number
 set tabstop=4
 set shiftwidth=4
 set expandtab
-set incsearch
 color wombat 
 set laststatus=2
 
-" Highlighting
-let hlstate=0
-nnoremap <c-c> :if (hlstate%2 == 0) \| nohlsearch \| else \| set hlsearch \| endif \| let hlstate=hlstate+1<cr>
+" Search behavior
+"let hlstate=0
+"nnoremap <c-c> :if (hlstate%2 == 0) \| nohlsearch \| else \| set hlsearch \| endif \| let hlstate=hlstate+1<cr>
+set nohlsearch
+set incsearch
 
 " Browser
 let g:netrw_browsex_viewer="google-chrome-stable"
+
+"------------------------------------
+" Syntastic
+"------------------------------------
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 "------------------------------------
 " Conceal
@@ -188,3 +201,27 @@ nmap <C-A-\> :TagbarToggle<CR>
 " Powerline
 "------------------------------------
 let g:airline_powerline_fonts = 1
+
+"------------------------------------
+" Tsuquyomi
+"------------------------------------
+let g:syntastic_typescript_checkers = ['tsuquyomi'] 
+
+"------------------------------------
+" YouCompleteMe
+"------------------------------------
+let g:ycm_global_ycm_extra_conf = "~/.dotfiles/vim/ycm_extra_conf.py"
+set completeopt-=preview
+
+"------------------------------------
+" SuperTab
+"------------------------------------
+" make YCM compatible with UltiSnips (using supertab)
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+let g:SuperTabDefaultCompletionType = '<C-n>'
+
+" better key bindings for UltiSnipsExpandTrigger
+let g:UltiSnipsExpandTrigger = "<tab>"
+"let g:UltiSnipsJumpForwardTrigger = "<tab>"
+"let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
